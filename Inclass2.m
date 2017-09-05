@@ -78,6 +78,8 @@ plot(c,'b-');
 %c. here is some data, imagine they are x and y coordinates for cells. 
 xy_dat = rand(100,2);
 %plot the data in the xy plane.
+scatter(xy_dat(:,1),xy_dat(:,2),24,dist,'filled')
+
 %now imagine there is some fluorescence data corresponding to the same
 %cells
 fluor = rand(100,1);
