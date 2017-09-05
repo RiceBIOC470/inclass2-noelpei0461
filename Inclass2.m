@@ -4,12 +4,20 @@
 % only the odd numbers
 
 for ii = 1:20
+    if rem(ii,2)==1
+        disp(ii);
+    end
 end
 
 % b. Write a new loop to display the same odd numbers which doesn't use a conditional statement 
-
+for ii = 1:2:20
+    disp(ii)
+end 
 % c. display the same odd numbers without a loop or conditional (hint use
 %  num2str)
+
+ii = num2str(1:2:20)
+disp(ii)
 
 
 %% 2. Vectorize the following code (that is produce the same result in z
@@ -20,12 +28,19 @@ end
 for ii = 1:100
     z(ii) = ii*ii;
 end
+Answer
+
+ii = 1:100
+sumofsqr = ii.^2
 
 %b. 
 z = 0;
 for ii = 1:100
     z = z + ii;
 end
+Answer:
+ii = cumsum(1:100)
+disp(ii(end))
 
 %c.
 xx = rand(50,2);
@@ -33,7 +48,8 @@ xx = rand(50,2);
 for ii = 1:50
     z(ii) = sqrt(xx(ii,1)^2+xx(ii,x)^2);
 end
-
+Answer:
+dist = sqrt(sum((xx,1).^2+(xx,2).^2))
 % d. what is the formula in c computing?
 
 %% plotting
