@@ -85,3 +85,4 @@ scatter(xy_dat(:,1),xy_dat(:,2),24,dist,'filled')
 fluor = rand(100,1);
 % plot the data in the xy plane but color code the data by the fluorescnece
 % values. Hint: see the scatter command
+scatter(fluor(:,1),fluor(:,2),24,dist,'fluorescnece')
