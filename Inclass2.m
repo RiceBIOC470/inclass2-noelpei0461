@@ -66,6 +66,14 @@ plot(c,'b-');
 
 %b. repeat the above but where each graph is in a different subplot in the
 % same figure. 
+x=linspace(0,4*pi,100);
+s=sin(x);
+subplot(211);
+plot(s,'r--');
+hold on;
+c=cos(x);
+subplot(212)
+plot(c,'b-');
 
 %c. here is some data, imagine they are x and y coordinates for cells. 
 xy_dat = rand(100,2);
