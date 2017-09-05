@@ -57,6 +57,12 @@ dist = sqrt(sum((xx,1).^2+(xx,2).^2))
 %a. make a plot of sin(x) and cos(x) vs x from x = 0 to 4*pi on the same axis where the graph
 %of sin(x) vs x is a red-dashed line and the graph of cos(x) vs x is a
 %blue solid line.
+x=linspace(0,4*pi,100);
+s=sin(x);
+plot(s,'r--');
+hold on;
+c=cos(x);
+plot(c,'b-');
 
 %b. repeat the above but where each graph is in a different subplot in the
 % same figure. 
