@@ -11,12 +11,12 @@ end
 
 % b. Write a new loop to display the same odd numbers which doesn't use a conditional statement 
 for ii = 1:2:20
-    disp(ii)
+    disp(ii);
 end 
 % c. display the same odd numbers without a loop or conditional (hint use
 %  num2str)
 
-ii = num2str(1:2:20)
+ii = num2str(1:2:20);
 disp(ii)
 
 
@@ -49,9 +49,9 @@ for ii = 1:50
     z(ii) = sqrt(xx(ii,1)^2+xx(ii,x)^2);
 end
 Answer:
-dist = sqrt(sum((xx,1).^2+(xx,2).^2))
+z = sqrt(sum((xx,1).^2+(xx,2).^2))
 % d. what is the formula in c computing?
-
+It is calculating the Pythagorean theorem
 %% plotting
 
 %a. make a plot of sin(x) and cos(x) vs x from x = 0 to 4*pi on the same axis where the graph
@@ -78,6 +78,9 @@ plot(c,'b-');
 %c. here is some data, imagine they are x and y coordinates for cells. 
 xy_dat = rand(100,2);
 %plot the data in the xy plane.
+for ii=1:100
+    dist(ii)=sqrt(xy_dat(ii,1)^2+xy_dat(ii,2)^2)
+end
 scatter(xy_dat(:,1),xy_dat(:,2),24,dist,'filled')
 
 %now imagine there is some fluorescence data corresponding to the same
@@ -85,4 +88,4 @@ scatter(xy_dat(:,1),xy_dat(:,2),24,dist,'filled')
 fluor = rand(100,1);
 % plot the data in the xy plane but color code the data by the fluorescnece
 % values. Hint: see the scatter command
-scatter(fluor(:,1),fluor(:,2),24,dist,'fluorescnece')
+scatter(fluor(:,1),fluor(:,2),24,fluor,'filled')
